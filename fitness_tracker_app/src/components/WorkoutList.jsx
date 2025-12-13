@@ -1,12 +1,16 @@
 import WorkoutItem from "./WorkoutItem";
 
-function WorkoutList({ workouts }) {
+function WorkoutList({ workouts, onDeleteWorkout }) {
   if (workouts.length === 0) return <p>No workouts yet</p>;
 
   return (
     <ul>
       {workouts.map((workout) => (
-        <WorkoutItem key={workout.id} workout={workout} />
+        <WorkoutItem
+          key={workout.id}
+          workout={workout}
+          onDeleteWorkout={onDeleteWorkout}
+        />
       ))}
     </ul>
   );

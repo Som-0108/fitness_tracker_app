@@ -8,7 +8,6 @@ function WorkoutForm({ onAddWorkout }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Create a workout object
     const newWorkout = {
       id: Date.now(), // unique ID
       name,
@@ -17,10 +16,9 @@ function WorkoutForm({ onAddWorkout }) {
       date: new Date().toISOString().slice(0, 10), // YYYY-MM-DD
     };
 
-    // Send workout to App.jsx
     onAddWorkout(newWorkout);
 
-    // Clear form
+    // Clear form fields
     setName("");
     setDuration("");
     setCalories("");
