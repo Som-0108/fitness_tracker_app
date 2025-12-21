@@ -5,7 +5,7 @@ import Intro from "./pages/Intro";
 import SignIn from "./pages/SignIn";
 import Gender from "./pages/Gender";
 import Age from "./pages/Age";
-import Weight from "./pages/Weight";
+import Weight from './pages/Weight.jsx';
 import Home from "./pages/Home";
 
 // Components
