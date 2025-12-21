@@ -1,54 +1,34 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-function WorkoutForm({ onAddWorkout }) {
-  const [name, setName] = useState("");
-  const [duration, setDuration] = useState("");
-  const [calories, setCalories] = useState("");
+export default function Dashboard({ goal, totalCalories }) {
+  const [progress, setProgress] = useState(0);
+  const [barColor, setBarColor] = useState("bg-green-500");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  // Animate progress whenever totalCalories or goal changes
+  useEffect(() => {
+    const newProgress = goal > 0 ? Math.min((totalCalories / goal) * 100, 100) : 0;
+    setProgress(newProgress);
 
-    const newWorkout = {
-      id: Date.now(), // unique ID
-      name,
-      duration: Number(duration),
-      calories: Number(calories) || 0,
-      date: new Date().toISOString().slice(0, 10), // YYYY-MM-DD
-    };
-
-    onAddWorkout(newWorkout);
-
-    // Clear form fields
-    setName("");
-    setDuration("");
-    setCalories("");
-  };
+    // Update bar color based on progress
+    if (newProgress <= 50) setBarColor("bg-green-500");
+    else if (newProgress <= 80) setBarColor("bg-yellow-400");
+    else setBarColor("bg-red-500");
+  }, [totalCalories, goal]);
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        placeholder="Workout name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        required
-      />
-      <input
-        type="number"
-        placeholder="Duration (minutes)"
-        value={duration}
-        onChange={(e) => setDuration(e.target.value)}
-        required
-      />
-      <input
-        type="number"
-        placeholder="Calories burned (optional)"
-        value={calories}
-        onChange={(e) => setCalories(e.target.value)}
-      />
-      <button type="submit">Add Workout</button>
-    </form>
+    <div className="bg-white p-4 rounded shadow">
+      <h2 className="font-bold text-xl mb-2">Dashboard</h2>
+      <p>Calorie Goal: {goal} cal</p>
+      <p>Calories Burned: {totalCalories} cal</p>
+
+      <div className="w-full bg-gray-200 h-4 rounded mt-2 overflow-hidden">
+        <div
+          className={`${barColor} h-4 rounded transition-all duration-700 ease-out`}
+          style={{ width: `${progress}%` }}
+        ></div>
+      </div>
+
+      <p className="text-sm mt-1">{progress.toFixed(1)}% of goal completed</p>
+    </div>
   );
 }
-
-export default WorkoutForm;
