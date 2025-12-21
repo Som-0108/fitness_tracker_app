@@ -1,16 +1,18 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
+import Intro from "./pages/Intro";
 import SignIn from "./pages/SignIn";
+import Home from "./pages/Home";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/" element={<Intro />} />
         <Route path="/signin" element={<SignIn />} />
 
         <Route
-          path="/"
+          path="/home"
           element={
             <ProtectedRoute>
               <Home />
@@ -22,4 +24,4 @@ function App() {
   );
 }
 
-export default App;
+export default App; // 🔴 THIS LINE MUST EXIST
