@@ -7,21 +7,13 @@ export default function SignIn() {
   const navigate = useNavigate();
 
   function handleSubmit(e) {
-  e.preventDefault();
+    e.preventDefault();
 
-  // TEMPORARY: allow any email & password
-  if (email && password) {
-    navigate("/gender");
-  } else {
-    alert("Please enter email and password");
-  }
-}
-
-    if (isLoginSuccessful) {
-      // Redirect to /gender after successful login
+    // TEMPORARY: allow any email & password
+    if (email && password) {
       navigate("/gender");
     } else {
-      alert("Invalid email or password");
+      alert("Please enter email and password");
     }
   }
 
