@@ -4,21 +4,21 @@ export default function Navbar() {
   const navigate = useNavigate();
 
   return (
-    <nav className="bg-gray-100 p-4 flex justify-around shadow-md">
+    <nav className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 p-4 flex justify-around shadow-md rounded-b-lg">
       <button
-        className="text-blue-500 font-bold"
+        className="text-white font-bold hover:underline"
         onClick={() => navigate("/dashboard")}
       >
         Dashboard
       </button>
       <button
-        className="text-green-500 font-bold"
+        className="text-white font-bold hover:underline"
         onClick={() => navigate("/workout-plan")}
       >
         Workout Plan
       </button>
       <button
-        className="text-purple-500 font-bold"
+        className="text-white font-bold hover:underline"
         onClick={() => navigate("/profile")}
       >
         Profile
