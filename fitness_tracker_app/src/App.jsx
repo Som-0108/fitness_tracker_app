@@ -12,15 +12,15 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-  <Route path="/" element={<Welcome />} />
-  <Route path="/" element={<SignIn />} />
-  <Route path="/gender" element={<Gender />} />
-  <Route path="/age" element={<Age />} />
-  <Route path="/weight" element={<Weight />} />
-  <Route path="/dashboard" element={<Dashboard />} />
-  <Route path="/workout-plan" element={<WorkoutPlan />} />
-  <Route path="/profile" element={<Profile />} />
-</Routes>
+        <Route path="/" element={<Welcome />} />
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/gender" element={<Gender />} />
+        <Route path="/age" element={<Age />} />
+        <Route path="/weight" element={<Weight />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/workout-plan" element={<WorkoutPlan />} />
+        <Route path="/profile" element={<Profile />} />
+      </Routes>
     </BrowserRouter>
   );
 }
