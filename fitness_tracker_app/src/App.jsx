@@ -12,6 +12,7 @@ function App() {
         <Route path="/signin" element={<SignIn />} />
         <Route path="/gender" element={<Gender />} />
         <Route path="/age" element={<Age />} />
+        <Route path="/weight" element={<Weight />} />
       </Routes>
     </BrowserRouter>
   );
