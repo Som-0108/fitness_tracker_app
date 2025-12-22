@@ -12,7 +12,7 @@ export default function Weight() {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen bg-gradient-to-br from-purple-200 via-pink-200 to-yellow-200">
+    <div className="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-purple-200 via-pink-200 to-yellow-200">
       <FaWeight className="text-6xl text-purple-700 mb-6 animate-bounce" />
       <h2 className="text-3xl font-bold mb-4 text-purple-700">Enter Your Weight</h2>
       <input type="number" placeholder="Weight (kg)" value={weight} onChange={(e) => setWeight(e.target.value)} className="border p-3 mb-6 rounded-xl w-64 shadow-md outline-none focus:ring-2 focus:ring-purple-400" />

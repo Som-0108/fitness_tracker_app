@@ -12,7 +12,7 @@ export default function Age() {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen bg-gradient-to-br from-green-200 via-yellow-200 to-orange-200">
+    <div className="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-green-200 via-yellow-200 to-orange-200">
       <FaBirthdayCake className="text-6xl text-green-700 mb-6 animate-bounce" />
       <h2 className="text-3xl font-bold mb-4 text-green-700">Enter Your Age</h2>
       <input type="number" placeholder="Age" value={age} onChange={(e) => setAge(e.target.value)} className="border p-3 mb-6 rounded-xl w-64 shadow-md outline-none focus:ring-2 focus:ring-green-400" />
