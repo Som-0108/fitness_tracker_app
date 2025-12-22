@@ -3,6 +3,7 @@ import Welcome from "./pages/Welcome";
 import SignIn from "./pages/SignIn";
 import Gender from "./pages/Gender";
 import Age from "./pages/Age";
+import Weight from "./pages/Weight";
 
 function App() {
   return (
