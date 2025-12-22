@@ -1,9 +1,28 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Welcome from "./pages/Welcome";
+import SignIn from "./pages/SignIn";
+import Gender from "./pages/Gender";
+import Age from "./pages/Age";
+import Weight from "./pages/Weight";
+import Dashboard from "./pages/Dashboard";
+import WorkoutPlan from "./pages/WorkoutPlan";
+import Profile from "./pages/Profile";
+
 export default function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-r from-purple-400 via-pink-400 to-yellow-400 flex items-center justify-center">
-      <h1 className="text-orange text-4xl font-bold">
-        Tailwind is working!
-      </h1>
+    <div className="min-h-screen bg-gradient-to-br from-purple-200 via-pink-200 to-yellow-200">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Welcome />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/gender" element={<Gender />} />
+          <Route path="/age" element={<Age />} />
+          <Route path="/weight" element={<Weight />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/workout-plan" element={<WorkoutPlan />} />
+          <Route path="/profile" element={<Profile />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
