@@ -13,7 +13,14 @@ function App() {
     <BrowserRouter>
       <Routes>
   <Route path="/" element={<Welcome />} />
-  <Route path="/signin" element={<SignIn />} />
+  <Route
+  path="/"
+  element={
+    <div className="bg-red-500 text-white p-8">
+      Hello Tailwind!
+    </div>
+  }
+/>
   <Route path="/gender" element={<Gender />} />
   <Route path="/age" element={<Age />} />
   <Route path="/weight" element={<Weight />} />
