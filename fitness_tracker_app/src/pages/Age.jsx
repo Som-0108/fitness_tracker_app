@@ -1,35 +1,33 @@
-import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Age() {
-  const [age, setAge] = useState(25);
+  const [age, setAge] = useState("");
   const navigate = useNavigate();
 
-  function next() {
-    localStorage.setItem("age", age);
-    navigate("/weight");
+  function handleNext() {
+    if (age) {
+      navigate("/weight");
+    } else {
+      alert("Please enter your age");
+    }
   }
 
   return (
-    <div className="min-h-screen bg-dark text-white p-6 text-center">
-      <h2 className="text-xl font-bold mb-6">How old are you?</h2>
-
+    <div className="flex flex-col justify-center items-center h-screen bg-gradient-to-br from-green-100 via-yellow-100 to-orange-100">
+      <h2 className="text-3xl font-bold mb-6 text-green-700">Enter Your Age</h2>
       <input
-        type="range"
-        min="10"
-        max="80"
+        type="number"
+        placeholder="Age"
         value={age}
         onChange={(e) => setAge(e.target.value)}
-        className="w-full"
+        className="border p-2 mb-6 rounded w-64"
       />
-
-      <p className="text-3xl font-bold mt-4">{age}</p>
-
       <button
-        onClick={next}
-        className="mt-6 bg-primary text-black w-full py-3 rounded"
+        onClick={handleNext}
+        className="bg-blue-500 text-white py-3 px-6 rounded-lg shadow-lg hover:bg-blue-600 transition"
       >
-        Next →
+        Continue
       </button>
     </div>
   );
