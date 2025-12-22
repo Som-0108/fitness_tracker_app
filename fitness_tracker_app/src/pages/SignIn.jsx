@@ -7,10 +7,15 @@ export default function SignIn() {
   const navigate = useNavigate();
 
   function handleSubmit(e) {
-    e.preventDefault();
+  e.preventDefault();
 
-    // Replace this with your real authentication logic
-    const isLoginSuccessful = email === "user@example.com" && password === "password123";
+  // TEMPORARY: allow any email & password
+  if (email && password) {
+    navigate("/gender");
+  } else {
+    alert("Please enter email and password");
+  }
+}
 
     if (isLoginSuccessful) {
       // Redirect to /gender after successful login
