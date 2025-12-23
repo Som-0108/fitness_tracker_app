@@ -1,18 +1,14 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-// Onboarding / Welcome Screens
-import Welcome from "./components/Welcome.jsx";
-import Gender from "./components/Gender.jsx";
-import Age from "./components/Age.jsx";
-import Weight from "./components/Weight.jsx";
-
-// Authentication
-import SignIn from "./components/SignIn.jsx";
-
-// Main App Screens
-import Dashboard from "./components/Dashboard.jsx";
-import Profile from "./components/Profile.jsx";
-import WorkoutPlan from "./components/WorkoutPlan.jsx";
+// Import components from ../components
+import Welcome from "../components/Welcome";
+import SignIn from "../components/SignIn";
+import Profile from "../components/Profile";
+import WorkoutPlan from "../components/WorkoutPlan";
+import Dashboard from "../components/Dashboard";
+import Gender from "../components/Gender";
+import Age from "../components/Age";
+import Weight from "../components/Weight";
 
 function App() {
   return (
