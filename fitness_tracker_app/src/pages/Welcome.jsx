@@ -5,7 +5,7 @@ export default function Welcome() {
 
   return (
     <div className="min-h-screen bg-[#0D0D0D] text-white flex flex-col justify-between">
-      {/* Background Image */}
+      {/* Welcome Back! */}
       <div
         className="h-[75vh] w-full bg-cover bg-center"
         style={{
