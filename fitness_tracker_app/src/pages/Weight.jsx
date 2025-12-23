@@ -5,7 +5,7 @@ export default function Weight() {
   const navigate = useNavigate();
   const [selected, setSelected] = useState(70);
 
-  const weights = [67, 68, 69, 70, 71, 72, 73];
+  const weights = [55, 56, 57, 58,67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100];
 
   return (
     <div className="min-h-screen bg-[#0D0D0D] text-white flex flex-col p-6">
