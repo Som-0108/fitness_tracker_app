@@ -1,35 +1,26 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Welcome from "./pages/Welcome";
+import SignIn from "./pages/SignIn";
+import Gender from "./pages/Gender";
+import Age from "./pages/Age";
+import Weight from "./pages/Weight";
+import Dashboard from "./pages/Dashboard";
+import WorkoutPlan from "./pages/WorkoutPlan";
+import Profile from "./pages/Profile";
 
-// Import components from ../components
-import Welcome from "../components/Welcome";
-import SignIn from "../components/SignIn";
-import Profile from "../components/Profile";
-import WorkoutPlan from "../components/WorkoutPlan";
-import Dashboard from "../components/Dashboard";
-import Gender from "../components/Gender";
-import Age from "../components/Age";
-import Weight from "../components/Weight";
-
-function App() {
+export default function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <Routes>
-        {/* Authentication */}
-        <Route path="/signin" element={<SignIn />} />
-
-        {/* Onboarding */}
         <Route path="/" element={<Welcome />} />
+        <Route path="/signin" element={<SignIn />} />
         <Route path="/gender" element={<Gender />} />
         <Route path="/age" element={<Age />} />
         <Route path="/weight" element={<Weight />} />
-
-        {/* Main App */}
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/profile" element={<Profile />} />
         <Route path="/workout-plan" element={<WorkoutPlan />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 }
-
-export default App;
