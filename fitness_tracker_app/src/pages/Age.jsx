@@ -1,44 +1,30 @@
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { FaBirthdayCake } from "react-icons/fa";
 
 export default function Age() {
   const navigate = useNavigate();
-  const [selected, setSelected] = useState(34);
-
-  const ages = [31, 32, 33, 34, 35, 36, 37];
 
   return (
-    <div className="min-h-screen bg-[#0D0D0D] text-white flex flex-col p-6">
-      {/* Title */}
-      <h2 className="text-xl text-gray-300 mt-10 mb-2">How old are you?</h2>
-      <p className="text-gray-400 mb-10 text-sm">You can always change it later</p>
+    <div className="min-h-screen bg-gradient-to-br from-purple-200 via-pink-200 to-yellow-200 flex flex-col justify-center items-center p-6">
+      <h1 className="text-3xl font-bold text-purple-800 mb-8">
+        How Old Are You?
+      </h1>
 
-      {/* Age List */}
-      <div className="flex flex-col gap-4 items-center mt-6">
-        {ages.map((age) => (
-          <div
-            key={age}
-            onClick={() => setSelected(age)}
-            className={`text-2xl font-semibold cursor-pointer ${
-              selected === age
-                ? "text-[#F9B233] scale-110"
-                : "text-gray-400"
-            } transition`}
-          >
-            {age}
-          </div>
-        ))}
+      <div className="bg-white shadow-lg rounded-xl p-6 flex flex-col items-center">
+        <FaBirthdayCake className="text-5xl text-purple-600 mb-3" />
+        <input
+          type="number"
+          placeholder="Enter age"
+          className="border rounded-lg p-3 text-center w-40 mt-2"
+        />
       </div>
 
-      {/* Next button */}
-      <div className="mt-auto flex justify-end">
-        <button
-          onClick={() => navigate("/weight")}
-          className="bg-[#F9B233] text-black py-3 px-6 rounded-lg font-semibold mt-10"
-        >
-          Next >
-        </button>
-      </div>
+      <button
+        onClick={() => navigate("/weight")}
+        className="bg-[#F9B233] text-black py-3 px-6 rounded-lg font-semibold mt-10"
+      >
+        Next <span className="text-xl">›</span>
+      </button>
     </div>
   );
 }

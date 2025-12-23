@@ -5,42 +5,29 @@ export default function Gender() {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-[#0D0D0D] text-white flex flex-col p-6">
-      {/* Title */}
-      <h2 className="text-xl text-gray-300 mt-10 mb-2">Tell us about yourself:</h2>
-      <h3 className="text-2xl font-bold mb-10">How do you identify?</h3>
+    <div className="min-h-screen bg-gradient-to-br from-purple-200 via-pink-200 to-yellow-200 flex flex-col justify-center items-center p-6">
+      <h1 className="text-3xl font-bold text-purple-800 mb-8">
+        Select Your Gender
+      </h1>
 
-      {/* Gender Options */}
-      <div className="flex flex-col gap-8 mt-6">
-
-        {/* Male */}
-        <button
-          onClick={() => navigate("/age")}
-          className="flex flex-col items-center bg-[#1A1A1A] p-8 rounded-xl border border-gray-700"
-        >
-          <FaMale className="text-[#F9B233] text-6xl mb-4" />
-          <span className="text-lg font-semibold">Male</span>
+      <div className="flex gap-6">
+        <button className="flex flex-col items-center bg-white shadow-lg p-6 rounded-xl">
+          <FaMale className="text-5xl text-blue-600 mb-2" />
+          <p className="font-semibold">Male</p>
         </button>
 
-        {/* Female */}
-        <button
-          onClick={() => navigate("/age")}
-          className="flex flex-col items-center bg-[#1A1A1A] p-8 rounded-xl border border-gray-700"
-        >
-          <FaFemale className="text-[#F9B233] text-6xl mb-4" />
-          <span className="text-lg font-semibold">Female</span>
+        <button className="flex flex-col items-center bg-white shadow-lg p-6 rounded-xl">
+          <FaFemale className="text-5xl text-pink-600 mb-2" />
+          <p className="font-semibold">Female</p>
         </button>
       </div>
 
-      {/* Next button */}
-      <div className="mt-auto flex justify-end">
-        <button
-          onClick={() => navigate("/age")}
-          className="bg-[#F9B233] text-black py-3 px-6 rounded-lg font-semibold mt-10"
-        >
-          Next >
-        </button>
-      </div>
+      <button
+        onClick={() => navigate("/age")}
+        className="bg-[#F9B233] text-black py-3 px-6 rounded-lg font-semibold mt-10"
+      >
+        Next <span className="text-xl">›</span>
+      </button>
     </div>
   );
 }
