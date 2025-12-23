@@ -13,7 +13,7 @@ export default function Profile() {
           className="w-28 h-28 rounded-full border-4 border-yellow-400 object-cover"
           alt="Profile"
         />
-        <h2 className="text-2xl mt-3 font-semibold">Julius</h2>
+        <h2 className="text-2xl mt-3 font-semibold">User</h2>
         <p className="text-yellow-400">Premium Member</p>
       </div>
 
@@ -22,19 +22,15 @@ export default function Profile() {
         <button className="w-full bg-[#1F1F1F] p-4 rounded-xl flex items-center gap-3">
           <FiUser className="text-yellow-400 text-xl" /> Edit Profile
         </button>
-
         <button className="w-full bg-[#1F1F1F] p-4 rounded-xl flex items-center gap-3">
           <FiBell className="text-yellow-400 text-xl" /> Notifications
         </button>
-
         <button className="w-full bg-[#1F1F1F] p-4 rounded-xl flex items-center gap-3">
           <FiClock className="text-yellow-400 text-xl" /> Workout History
         </button>
-
         <button className="w-full bg-[#1F1F1F] p-4 rounded-xl flex items-center gap-3">
           <FiStar className="text-yellow-400 text-xl" /> Saved Workouts
         </button>
-
         <button className="w-full bg-[#1F1F1F] p-4 rounded-xl flex items-center gap-3 text-red-400">
           <FiLogOut className="text-red-400 text-xl" /> Logout
         </button>

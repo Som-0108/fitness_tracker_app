@@ -5,22 +5,22 @@ export default function Welcome() {
 
   return (
     <div className="min-h-screen bg-[#0D0D0D] text-white flex flex-col justify-between">
-      {/* Welcome Back! */}
+      {/* Top Section - Image or Background */}
       <div
         className="h-[75vh] w-full bg-cover bg-center"
         style={{
-          backgroundImage: "url('/welcome_bg.jpg')", // add an image later
+          backgroundImage: "url('/welcome_bg.jpg')", // Add an image here
         }}
       ></div>
 
-      {/* Bottom Section */}
-      <div className="p-6">
-        <h1 className="text-3xl font-bold">FITNESS APP</h1>
-        <p className="text-gray-300 mt-1">DON’T QUIT, STAY FIT</p>
+      {/* Bottom Section - Text and Button */}
+      <div className="p-6 flex flex-col items-center">
+        <h1 className="text-4xl font-bold mb-2">Welcome!</h1>
+        <p className="text-yellow-400 text-lg mb-6">Let's get started with your fitness journey</p>
 
         <button
           onClick={() => navigate("/signin")}
-          className="w-full bg-[#F9B233] text-black py-3 rounded-lg mt-6 font-semibold"
+          className="w-full bg-[#F9B233] text-black py-3 rounded-lg font-semibold"
         >
           START NOW
         </button>

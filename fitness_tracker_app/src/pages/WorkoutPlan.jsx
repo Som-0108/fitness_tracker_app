@@ -6,7 +6,7 @@ export default function WorkoutPlan() {
     <div className="min-h-screen bg-[#111] text-white p-5 pb-24">
       {/* Greeting */}
       <div className="mb-6">
-        <h1 className="text-3xl font-bold">Hello Julius!</h1>
+        <h1 className="text-3xl font-bold">Workout Plan</h1>
         <p className="text-yellow-400 text-lg font-medium">Good Morning</p>
       </div>
 
@@ -40,6 +40,7 @@ export default function WorkoutPlan() {
             <img
               src="/images/beginner.jpg"
               className="rounded-lg h-28 w-full object-cover mb-2"
+              alt="Beginner Workout"
             />
             <h3 className="text-yellow-400 font-bold text-lg">Beginner</h3>
             <p className="text-sm opacity-80">Basics of Training</p>
@@ -52,11 +53,24 @@ export default function WorkoutPlan() {
             <img
               src="/images/newworkout.jpg"
               className="rounded-lg h-28 w-full object-cover mb-2"
+              alt="New Workout"
             />
             <h3 className="text-yellow-400 font-bold text-lg">New Workouts</h3>
             <p className="text-sm opacity-80">Try something new</p>
           </div>
         </Link>
+      </div>
+
+      {/* Example Workout List */}
+      <div className="mt-8">
+        <h2 className="text-xl font-semibold mb-2">Weekly Plan</h2>
+        <ul className="list-disc ml-6 text-white">
+          <li>Day 1: Full Body Strength</li>
+          <li>Day 2: Cardio & Core</li>
+          <li>Day 3: Upper Body Strength</li>
+          <li>Day 4: Rest</li>
+          <li>Day 5: Lower Body Strength</li>
+        </ul>
       </div>
 
       {/* Bottom Navigation */}
