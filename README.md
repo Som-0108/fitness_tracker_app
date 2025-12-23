@@ -31,7 +31,7 @@
 ![Welcome Screen](./path/to/screenshot.png)
 
 ### Usage
-- Visit http://localhost:3000
+- Visit http://localhost:5173/profile
 - Click “Start Now” to begin onboarding
 - Navigate through screens
 
