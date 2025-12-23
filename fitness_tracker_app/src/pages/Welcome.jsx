@@ -1,21 +1,30 @@
 import { useNavigate } from "react-router-dom";
-import { FaRunning } from "react-icons/fa";
 
 export default function Welcome() {
   const navigate = useNavigate();
+
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-purple-200 via-pink-200 to-yellow-200">
-      <FaRunning className="text-6xl text-purple-700 mb-6 animate-bounce" />
-      <h1 className="text-4xl font-extrabold mb-4 text-purple-700">Welcome</h1>
-      <p className="text-lg mb-6 text-gray-700 text-center max-w-md">
-        Let’s get you started on your fitness journey!
-      </p>
-      <button
-        onClick={() => navigate("/signin")}
-        className="bg-blue-500 text-white py-3 px-8 rounded-full shadow-lg hover:bg-blue-600 transform hover:scale-105 transition"
-      >
-        Get Started
-      </button>
+    <div className="min-h-screen bg-[#0D0D0D] text-white flex flex-col justify-between">
+      {/* Background Image */}
+      <div
+        className="h-[75vh] w-full bg-cover bg-center"
+        style={{
+          backgroundImage: "url('/welcome_bg.jpg')", // add an image later
+        }}
+      ></div>
+
+      {/* Bottom Section */}
+      <div className="p-6">
+        <h1 className="text-3xl font-bold">FITNESS APP</h1>
+        <p className="text-gray-300 mt-1">DON’T QUIT, STAY FIT</p>
+
+        <button
+          onClick={() => navigate("/signin")}
+          className="w-full bg-[#F9B233] text-black py-3 rounded-lg mt-6 font-semibold"
+        >
+          START NOW
+        </button>
+      </div>
     </div>
   );
 }

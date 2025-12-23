@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { FaEnvelope, FaLock } from "react-icons/fa";
 
 export default function SignIn() {
   const [email, setEmail] = useState("");
@@ -9,27 +8,40 @@ export default function SignIn() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    if (email && password) navigate("/gender");
-    else alert("Please enter email and password");
+    if (email && password) {
+      navigate("/gender");
+    }
   }
 
   return (
-    <div className="min-h-screen flex justify-center items-center bg-gradient-to-br from-green-200 via-yellow-200 to-orange-200">
-      <form className="bg-white p-8 rounded-2xl shadow-2xl w-80 flex flex-col gap-4" onSubmit={handleSubmit}>
-        <h2 className="text-2xl font-bold mb-6 text-center text-green-700">Sign In</h2>
+    <div className="min-h-screen bg-[#0D0D0D] text-white p-6 flex flex-col justify-center">
+      <h2 className="text-3xl font-bold mb-8">Welcome Back, Micheal!</h2>
 
-        <div className="flex items-center border rounded-lg p-2 gap-2">
-          <FaEnvelope className="text-gray-400" />
-          <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} className="w-full outline-none" required />
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <input
+          type="email"
+          placeholder="Email"
+          className="w-full p-3 bg-transparent border-b border-gray-600 text-white focus:outline-none"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+
+        <input
+          type="password"
+          placeholder="Password"
+          className="w-full p-3 bg-transparent border-b border-gray-600 text-white focus:outline-none"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+
+        <div className="text-right">
+          <button type="button" className="text-gray-400 text-sm">
+            Forgot Password?
+          </button>
         </div>
 
-        <div className="flex items-center border rounded-lg p-2 gap-2">
-          <FaLock className="text-gray-400" />
-          <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} className="w-full outline-none" required />
-        </div>
-
-        <button type="submit" className="bg-blue-500 text-white py-3 rounded-full shadow-lg hover:bg-blue-600 transform hover:scale-105 transition mt-4">
-          Sign In
+        <button className="w-full bg-[#F9B233] text-black py-3 rounded-lg font-semibold">
+          Login
         </button>
       </form>
     </div>
